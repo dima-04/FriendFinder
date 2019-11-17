@@ -10,29 +10,106 @@
     </head>
     <body>
       <div class="container">
-        <form>
+        <form action="/api/friends" method="POST">
             <div class="form-group">
-              <h3 for="input"> Do you like an animal?</h3></div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">1</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">2</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                <label class="form-check-label" for="inlineRadio3">3</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                <label class="form-check-label" for="inlineRadio3">4</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                <label class="form-check-label" for="inlineRadio3">5</label>
-              </div>
+                <h3 for="input"> What is your Name</h3>
+                <input class="form-control form-control-sm" type="text" placeholder="Type your Name">
+                <h3 for="input"> Add your picture here</h3>
+                <input class="form-control form-control-sm" type="text" placeholder="Select your URL">
+
+              <h3 for="input"> Do you like dog?</h3>
+              <select class="custom-select" name="question1" id="question1">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="3">Four</option>
+                  <option value="3">Fife</option>
+                </select>
+              <h3 for="input"> Do you like cat?</h3>
+              <select class="custom-select" name="question2" id="question2">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="3">Four</option>
+                  <option value="3">Fife</option>
+                </select>
+              <h3 for="input"> Do you like sport?</h3>
+              <select class="custom-select" name="question3" id="question3">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="3">Four</option>
+                  <option value="3">Fife</option>
+                </select>
+             
+              <h3 for="input">Do you like go to cinema?</h3>
+              <select class="custom-select" name="question4" id="question4">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="3">Four</option>
+                  <option value="3">Fife</option>
+                </select>
+              <h3 for="input">Do you like Mediterranean Food?</h3>
+              <select class="custom-select" name="question5" id="question5">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="3">Four</option>
+                  <option value="3">Fife</option>
+                </select>
+              <h3 for="input">Do you like drink wine?</h3>
+              <select class="custom-select"name="question6"id="question6">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="3">Four</option>
+                  <option value="3">Fife</option>
+                </select>
+              <h3 for="input">Do you like Hiking?</h3>
+              <select class="custom-select" name="question7" id="question7">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="3">Four</option>
+                  <option value="3">Fife</option>
+                </select>
+              <h3 for="input">Do you like Snow?</h3>
+              <select class="custom-select" name="question9" id="question8">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="3">Four</option>
+                  <option value="3">Fife</option>
+                </select>
+              <h3 for="input">Do you like Travail?</h3>
+              <select class="custom-select" name="question10" id="question9">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="3">Four</option>
+                  <option value="3">Fife</option>
+                </select>
+              <h3 for="input">Do you like classic music?</h3>
+              <select class="custom-select" id="question10">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="3">Four</option>
+                  <option value="3">Fife</option>
+                </select>
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            </div>
           </form>
         </div>
           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
