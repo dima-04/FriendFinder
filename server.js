@@ -40,17 +40,16 @@ app.post("/api/friends", function (req, res) {
         scores: []
     };
 
-    newFriend.scores.push(req.body.question1);
-    newFriend.scores.push(req.body.question2);
-    newFriend.scores.push(req.body.question3);
-    newFriend.scores.push(req.body.question4);
-    newFriend.scores.push(req.body.question5);
-    newFriend.scores.push(req.body.question6);
-    newFriend.scores.push(req.body.question7);
-    newFriend.scores.push(req.body.question8);
-    newFriend.scores.push(req.body.question9);
-    newFriend.scores.push(req.body.question10);
-    console.log(newFriend);
+    newFriend.scores.push(parseInt(req.body.question1));
+    newFriend.scores.push(parseInt(req.body.question2));
+    newFriend.scores.push(parseInt(req.body.question3));
+    newFriend.scores.push(parseInt(req.body.question4));
+    newFriend.scores.push(parseInt(req.body.question5));
+    newFriend.scores.push(parseInt(req.body.question6));
+    newFriend.scores.push(parseInt(req.body.question7));
+    newFriend.scores.push(parseInt(req.body.question8));
+    newFriend.scores.push(parseInt(req.body.question9));
+    newFriend.scores.push(parseInt(req.body.question10));
     
 
     friends.push(newFriend);
