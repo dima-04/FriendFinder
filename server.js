@@ -1,5 +1,6 @@
 var express = require("express");
 var path = require("path");
+var friends = require("./app/data/friends.js")
 
 // Sets up the Express App
 // =============================================================
@@ -12,35 +13,56 @@ app.use(express.json());
 
 //==============================================//
 
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
     // res.send("Welcome to the Star Wars Page!")
     res.sendFile(path.join(__dirname, "app/public/home.html"));
-  });
-  app.get("/survey.html", function(req, res) {
+});
+app.get("/survey.html", function (req, res) {
     // res.send("Welcome to the Star Wars Page!")
     res.sendFile(path.join(__dirname, "app/public/survey.html"));
-  });
-  app.post("/api/friends", function(req, res) {
+});
+app.get("/api/friends", function (req, res) {
+    return res.json(friends);
+});
+app.post("/api/friends", function (req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body parsing middleware
     // var newCharacter = req.body;
-  
+
     // Using a RegEx Pattern to remove spaces from newCharacter
     // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
     // newCharacter.routeName = newCharacter.name.replace(/\s+/g, "").toLowerCase();
-  
+
     console.log(req.body);
-  
-    // characters.push(newCharacter);
-  
+    var newFriend = {
+        name: req.body.name,
+        photo: req.body.photo,
+        scores: []
+    };
+
+    newFriend.scores.push(req.body.question1);
+    newFriend.scores.push(req.body.question2);
+    newFriend.scores.push(req.body.question3);
+    newFriend.scores.push(req.body.question4);
+    newFriend.scores.push(req.body.question5);
+    newFriend.scores.push(req.body.question6);
+    newFriend.scores.push(req.body.question7);
+    newFriend.scores.push(req.body.question8);
+    newFriend.scores.push(req.body.question9);
+    newFriend.scores.push(req.body.question10);
+    console.log(newFriend);
+    
+
+    friends.push(newFriend);
+
     res.json("hello");
-  });
+});
 
 
-  //==============================================//
+//==============================================//
 
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function() {
+app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
-  });
+});

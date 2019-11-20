@@ -12,13 +12,13 @@
       <div class="container">
         <form action="/api/friends" method="POST">
             <div class="form-group">
-                <h3 for="input"> What is your Name</h3>
-                <input class="form-control form-control-sm" type="text" placeholder="Type your Name">
+                <h3 for="name"> What is your Name</h3>
+                <input class="form-control form-control-sm" type="text" placeholder="Type your Name" name="name" required>
                 <h3 for="input"> Add your picture here</h3>
-                <input class="form-control form-control-sm" type="text" placeholder="Select your URL">
+                <input class="form-control form-control-sm" type="text" placeholder="Select your URL" name="photo" required>
 
               <h3 for="input"> Do you like dog?</h3>
-              <select class="custom-select" name="question1" id="question1">
+              <select class="custom-select" name="question1" id="question1" required >
                   <option selected>Choose...</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
@@ -27,7 +27,7 @@
                   <option value="3">Fife</option>
                 </select>
               <h3 for="input"> Do you like cat?</h3>
-              <select class="custom-select" name="question2" id="question2">
+              <select class="custom-select" name="question2" id="question2" required>
                   <option selected>Choose...</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
@@ -36,7 +36,7 @@
                   <option value="3">Fife</option>
                 </select>
               <h3 for="input"> Do you like sport?</h3>
-              <select class="custom-select" name="question3" id="question3">
+              <select class="custom-select" name="question3" id="question3" required>
                   <option selected>Choose...</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
@@ -46,7 +46,7 @@
                 </select>
              
               <h3 for="input">Do you like go to cinema?</h3>
-              <select class="custom-select" name="question4" id="question4">
+              <select class="custom-select" name="question4" id="question4" required>
                   <option selected>Choose...</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
@@ -55,7 +55,7 @@
                   <option value="3">Fife</option>
                 </select>
               <h3 for="input">Do you like Mediterranean Food?</h3>
-              <select class="custom-select" name="question5" id="question5">
+              <select class="custom-select" name="question5" id="question5" required>
                   <option selected>Choose...</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
@@ -64,7 +64,7 @@
                   <option value="3">Fife</option>
                 </select>
               <h3 for="input">Do you like drink wine?</h3>
-              <select class="custom-select"name="question6"id="question6">
+              <select class="custom-select"name="question6"id="question6" required>
                   <option selected>Choose...</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
@@ -73,7 +73,7 @@
                   <option value="3">Fife</option>
                 </select>
               <h3 for="input">Do you like Hiking?</h3>
-              <select class="custom-select" name="question7" id="question7">
+              <select class="custom-select" name="question7" id="question7" required>
                   <option selected>Choose...</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
@@ -82,7 +82,7 @@
                   <option value="3">Fife</option>
                 </select>
               <h3 for="input">Do you like Snow?</h3>
-              <select class="custom-select" name="question9" id="question8">
+              <select class="custom-select" name="question8" id="question8" required>
                   <option selected>Choose...</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
@@ -90,8 +90,8 @@
                   <option value="3">Four</option>
                   <option value="3">Fife</option>
                 </select>
-              <h3 for="input">Do you like Travail?</h3>
-              <select class="custom-select" name="question10" id="question9">
+              <h3 for="input">Do you like Travel?</h3>
+              <select class="custom-select" name="question9" id="question9" required>
                   <option selected>Choose...</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
@@ -100,7 +100,7 @@
                   <option value="3">Fife</option>
                 </select>
               <h3 for="input">Do you like classic music?</h3>
-              <select class="custom-select" id="question10">
+              <select class="custom-select" name="question10" id="question10" required>
                   <option selected>Choose...</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
