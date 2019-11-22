@@ -50,12 +50,32 @@ app.post("/api/friends", function (req, res) {
     newFriend.scores.push(parseInt(req.body.question8));
     newFriend.scores.push(parseInt(req.body.question9));
     newFriend.scores.push(parseInt(req.body.question10));
-    
+
+   let friendFinder= findNewFriend(friends, newFriend);
 
     friends.push(newFriend);
 
-    res.json("hello");
+    res.json(friendFinder);
 });
+function findNewFriend(friends, newFriend) {
+    let minScore=null;
+    let bestFriend = null;
+    for (let i = 0; i < friends.length; i++) {
+        let score = getScore(friends[i], newFriend);
+        if( minScore===null || minScore>score ){
+            minScore = score;
+            bestFriend = friends[i];
+        }
+    }
+return bestFriend;
+}
+function getScore(friend, newFriend) {
+    let score = 0;
+    for (let i = 0; i < friend.scores.length; i++) {
+        score += Math.abs(friend.scores[i] - newFriend.scores[i]);
+    }
+    return score;
+}
 
 
 //==============================================//
