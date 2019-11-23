@@ -18,23 +18,23 @@
         <input class="form-control form-control-sm" id="picture" type="text" placeholder="Select your URL" name="photo"
           required>
 
-        <h3 for="input"> Do you like dog?</h3>
+        <h3 for="input"> Do you like a dog?</h3>
         <select class="custom-select" name="question1" id="question1" required>
           <option selected>Choose...</option>
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
-          <option value="3">Four</option>
-          <option value="3">Fife</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
         </select>
-        <h3 for="input"> Do you like cat?</h3>
+        <h3 for="input"> Do you like a cat?</h3>
         <select class="custom-select" name="question2" id="question2" required>
           <option selected>Choose...</option>
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
-          <option value="3">Four</option>
-          <option value="3">Fife</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
         </select>
         <h3 for="input"> Do you like sport?</h3>
         <select class="custom-select" name="question3" id="question3" required>
@@ -42,36 +42,36 @@
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
-          <option value="3">Four</option>
-          <option value="3">Fife</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
         </select>
 
-        <h3 for="input">Do you like go to cinema?</h3>
+        <h3 for="input">Do you want to go to the cinema?</h3>
         <select class="custom-select" name="question4" id="question4" required>
           <option selected>Choose...</option>
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
-          <option value="3">Four</option>
-          <option value="3">Fife</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
         </select>
-        <h3 for="input">Do you like Mediterranean Food?</h3>
+        <h3 for="input">Do you like Mediterranean food?</h3>
         <select class="custom-select" name="question5" id="question5" required>
           <option selected>Choose...</option>
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
-          <option value="3">Four</option>
-          <option value="3">Fife</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
         </select>
-        <h3 for="input">Do you like drink wine?</h3>
+        <h3 for="input">Do you like to drink wine?</h3>
         <select class="custom-select" name="question6" id="question6" required>
           <option selected>Choose...</option>
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
-          <option value="3">Four</option>
-          <option value="3">Fife</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
         </select>
         <h3 for="input">Do you like Hiking?</h3>
         <select class="custom-select" name="question7" id="question7" required>
@@ -79,17 +79,17 @@
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
-          <option value="3">Four</option>
-          <option value="3">Fife</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
         </select>
-        <h3 for="input">Do you like Snow?</h3>
+        <h3 for="input">Do you like snow?</h3>
         <select class="custom-select" name="question8" id="question8" required>
           <option selected>Choose...</option>
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
-          <option value="3">Four</option>
-          <option value="3">Fife</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
         </select>
         <h3 for="input">Do you like Travel?</h3>
         <select class="custom-select" name="question9" id="question9" required>
@@ -97,17 +97,17 @@
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
-          <option value="3">Four</option>
-          <option value="3">Fife</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
         </select>
-        <h3 for="input">Do you like classic music?</h3>
+        <h3 for="input">Do you like classical music?</h3>
         <select class="custom-select" name="question10" id="question10" required>
           <option selected>Choose...</option>
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
-          <option value="3">Four</option>
-          <option value="3">Fife</option>
+          <option value="4">Four</option>
+          <option value="4">Five</option>
         </select>
         <button type="submit" id="submit" class="btn btn-primary mt-3">Submit</button>
       </div>
@@ -131,9 +131,6 @@
       </div>
     </div>
   </div>
-
-
-
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -166,7 +163,10 @@
         data: friend,
         dataType: "json",
       }).then(function (response) {
-        console.log(response)
+        $("#modalName").text(response.name);
+        $("#image").attr("src",response.photo);
+        $('#modal').modal('show');
+
       });
     });</script>
 </body>

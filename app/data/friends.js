@@ -6,7 +6,7 @@ var friends = [
     },
     {
         name: "hala",
-        photo: "2wCEAAkGBxMTEhUSExMVFRUWFRUVGBcXFxUWFxgYGBcXGBcYFhYYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGy0lHyUtKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Haifa_Wahbe.jpg",
         scores: [3,6,7,9,8,6,3,2,1,4]
     },
     {
