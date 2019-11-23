@@ -163,8 +163,8 @@
         data: friend,
         dataType: "json",
       }).then(function (response) {
-        $("#modalName").text(response.name);
-        $("#image").attr("src",response.photo);
+        $("#modalName").text("Name:" + response.name);
+        $("#image").attr("src","Photo:" + response.photo);
         $('#modal').modal('show');
 
       });
