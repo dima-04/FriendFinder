@@ -164,7 +164,7 @@
         dataType: "json",
       }).then(function (response) {
         $("#modalName").text("Name:" + response.name);
-        $("#image").attr("src","Photo:" + response.photo);
+        $("#image").attr("src",response.photo);
         $('#modal').modal('show');
 
       });
